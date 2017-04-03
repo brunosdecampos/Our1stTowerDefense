@@ -26,23 +26,24 @@ public class TowerShoot : MonoBehaviour
         {
             if (targets.Count > 0)
             {
-                OrientToEnemy(targets[0]);
-                if (Time.time > shootTimer)
-                {
-                    ShootEnemy();
-                }
                 CheckIfEnemyIsDead(targets[0]);
+                if (targets.Count > 0)
+                {
+                    OrientToEnemy(targets[0]);
+                    if (Time.time > shootTimer)
+                    {
+                        ShootEnemy();
+                    }
+                }
             }
         }
 	}
 
     private void CheckIfEnemyIsDead(GameObject enemy)
     {
-        int enemyHealth = enemy.GetComponent<EnemyProperties>().GetHealth();
-        if(enemyHealth < 1)
+        if(enemy == null)
         {
             targets.Remove(enemy);
-            Destroy(enemy);
         }
     }
 
