@@ -9,28 +9,30 @@ public class TowerShoot : MonoBehaviour
     float shootTimer = 0;
     public List<GameObject> targets;
     Vector3 dir;
-    Quaternion initRot;
     public GameObject projectilePrefab;
     public float projSpeed = 10;
+    public bool placed = true;
 
 	// Use this for initialization
 	void Start ()
     {
         targets = new List<GameObject>();
-        initRot = transform.rotation;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-		if(targets.Count > 0)
+        if (placed)
         {
-            OrientToEnemy(targets[0]);
-            if (Time.time > shootTimer)
+            if (targets.Count > 0)
             {
-                ShootEnemy();
+                OrientToEnemy(targets[0]);
+                if (Time.time > shootTimer)
+                {
+                    ShootEnemy();
+                }
+                CheckIfEnemyIsDead(targets[0]);
             }
-            CheckIfEnemyIsDead(targets[0]);
         }
 	}
 
