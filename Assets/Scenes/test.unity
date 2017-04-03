@@ -398,6 +398,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ee9d61f0e716244082a12c559ee5ab6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1507507563
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4597728105088302, guid: d2505ccfb10224f47a4ebf3896d9c7e1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.5299997
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597728105088302, guid: d2505ccfb10224f47a4ebf3896d9c7e1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597728105088302, guid: d2505ccfb10224f47a4ebf3896d9c7e1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.08500004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597728105088302, guid: d2505ccfb10224f47a4ebf3896d9c7e1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597728105088302, guid: d2505ccfb10224f47a4ebf3896d9c7e1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597728105088302, guid: d2505ccfb10224f47a4ebf3896d9c7e1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597728105088302, guid: d2505ccfb10224f47a4ebf3896d9c7e1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597728105088302, guid: d2505ccfb10224f47a4ebf3896d9c7e1, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d2505ccfb10224f47a4ebf3896d9c7e1, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1511708762
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,7 +499,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
+  m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}

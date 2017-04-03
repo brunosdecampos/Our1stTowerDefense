@@ -24,5 +24,9 @@ public class ResolveDamage : MonoBehaviour
             ep.ChangeHealth(-projectileStrength);
             Destroy(gameObject);
         }
+        else if (other.gameObject.tag.Equals("KillPlane"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
