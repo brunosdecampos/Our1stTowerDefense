@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33574640428910492}
   - component: {fileID: 65798660951240588}
   - component: {fileID: 23834707387645890}
+  - component: {fileID: 114882456429760602}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -203,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34d1d021c18588b46a76ef80ba8ac3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 3
 --- !u!114 &114647264873245634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,3 +219,14 @@ MonoBehaviour:
   seekFactor: 0.1
   numOfWaypoints: 6
   maxSpeed: 3
+--- !u!114 &114882456429760602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026647315199070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62ab21344bd41b4da1fbec3bca9c1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

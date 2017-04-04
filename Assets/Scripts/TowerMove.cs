@@ -24,7 +24,7 @@ public class TowerMove : MonoBehaviour
             Vector3 pos = Camera.main.ScreenToWorldPoint(mousePos);
             pos.y = 0.5f;
             transform.position = pos;
-            Debug.Log(pos);
+            //Debug.Log(pos);
             if (placable)
             {
                 if (Input.GetMouseButtonDown(0))
