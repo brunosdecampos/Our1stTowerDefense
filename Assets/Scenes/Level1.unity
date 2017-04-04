@@ -118,9 +118,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f6341fd5bfe84234a4ee9da2ea36564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   enemyPrefab: {fileID: 1711117117057132, guid: 04822b15f078dd74097deea6a9d0774a,
     type: 2}
   enemyCreationTime: 3
+=======
+  enemyPrefab:
+  - {fileID: 1711117117057132, guid: 04822b15f078dd74097deea6a9d0774a, type: 2}
+  enemyCreationTime: 1
+>>>>>>> Stashed changes
 --- !u!4 &153468685
 Transform:
   m_ObjectHideFlags: 0

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
-	public GameObject enemyPrefab;
+	public List<GameObject> enemyPrefab;
 	public float enemyCreationTime = 3;
 	float timer = 0;
+	List<string> Enemies = new List<string>();
+
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +20,7 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		if (Time.time > timer)
 		{
-			Instantiate (enemyPrefab, new Vector3 (-17, 0.5f, -8), Quaternion.identity);
+			Instantiate (enemyPrefab[0], new Vector3 (-17, 0.5f, -8), Quaternion.identity);
 			timer = Time.time + enemyCreationTime;
 		}
 	}
