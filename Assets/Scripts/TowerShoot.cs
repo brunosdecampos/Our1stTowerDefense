@@ -20,7 +20,7 @@ public class TowerShoot : MonoBehaviour
     }
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
         if (placed)
         {
@@ -54,6 +54,7 @@ public class TowerShoot : MonoBehaviour
         Debug.DrawRay(transform.position, dir);
         dir.y = 0;
         transform.rotation = Quaternion.LookRotation(dir, transform.up);
+        Debug.Log(transform.rotation);
     }
 
     void ShootEnemy()

@@ -17,6 +17,6 @@ public class DisplayHealth : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate ()
     {
-        transform.localScale = new Vector3((float)ep.GetHealth() / (float)ep.maxHealth, scale.y, scale.z);
+        transform.localScale = new Vector3(ep.GetHealth() / (float)ep.maxHealth, scale.y, scale.z);
     }
 }

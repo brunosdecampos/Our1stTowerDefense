@@ -9,7 +9,7 @@ public class DetectEnemy : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        ts = transform.parent.GetChild(0).GetComponent<TowerShoot>();
+        ts = transform.parent.GetChild(1).GetComponent<TowerShoot>();
 	}
 	
 	// Update is called once per frame
