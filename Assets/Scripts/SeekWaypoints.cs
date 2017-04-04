@@ -31,8 +31,8 @@ public class SeekWaypoints : MonoBehaviour
     void Update ()
     {
         Seek();
-        //Debug.Log(vel.magnitude);
-        if (vel.magnitude < seekFactor + 0.05f)
+		Debug.Log((seekPos - transform.position).magnitude);
+		if ((seekPos - transform.position).magnitude < 0.7f)
         {
             //Debug.Log("Reached waypoint " + seek_i);
             if (seek_i < waypoints.Count - 1)
