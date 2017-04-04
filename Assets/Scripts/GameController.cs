@@ -7,13 +7,10 @@ public class GameController : MonoBehaviour {
 	public List<GameObject> enemyPrefab;
 	public float enemyCreationTime = 3;
 	float timer = 0;
-	List<string> Enemies = new List<string>();
-
 
 	// Use this for initialization
 	void Start () {
 	//	Instantiate(enemyPrefab, new Vector3 (-10, 0.5f, -8), Quaternion.identity);
-
 	}
 	
 	// Update is called once per frame

@@ -54,14 +54,13 @@ public class TowerShoot : MonoBehaviour
         Debug.DrawRay(transform.position, dir);
         dir.y = 0;
         transform.rotation = Quaternion.LookRotation(dir, transform.up);
-        Debug.Log(transform.rotation);
     }
 
     void ShootEnemy()
     {
         Vector3 spawnPos = transform.position;
         spawnPos.y = 0.5f;
-        GameObject projectile = GameObject.Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
+        GameObject projectile = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
         projectile.GetComponent<Rigidbody>().velocity = dir.normalized * projSpeed;
         shootTimer = Time.time + shotInterval;
     }

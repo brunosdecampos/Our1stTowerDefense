@@ -592,6 +592,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05e5227bf8715f14eb9a5455ea95691f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placable: 1
+  oldColors: []
+  towerCost: 25
 --- !u!135 &135070760873960928
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -599,7 +602,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1496514463895352}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 5
