@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MoneyManager : MonoBehaviour
 {
     public int balance = 100;
-    public GameObject towerPrefab;
+    public List<GameObject> towerPrefab;
     Text balanceTxt;
     public bool placeMode = false;
     GameObject currentTower;
@@ -24,15 +24,25 @@ public class MoneyManager : MonoBehaviour
 
         if (!placeMode)
         {
-            if (Input.GetKeyDown(KeyCode.T))
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                currentTower = Instantiate(towerPrefab, new Vector3(0, 0, -4), Quaternion.identity);
+                currentTower = Instantiate(towerPrefab[0], new Vector3(0, 0, -4), Quaternion.identity);
+                placeMode = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                currentTower = Instantiate(towerPrefab[1], new Vector3(0, 0, -4), Quaternion.identity);
+                placeMode = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                currentTower = Instantiate(towerPrefab[2], new Vector3(0, 0, -4), Quaternion.identity);
                 placeMode = true;
             }
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.T))
+            if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3))
             {
                 Destroy(currentTower);
                 placeMode = false;
