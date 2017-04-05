@@ -152,6 +152,7 @@ MonoBehaviour:
   balance: 100
   towerPrefab: {fileID: 1455798121623554, guid: e8ba8f2418686664ebc9b619396c4cab,
     type: 2}
+  placeMode: 0
 --- !u!1001 &170533132
 Prefab:
   m_ObjectHideFlags: 0

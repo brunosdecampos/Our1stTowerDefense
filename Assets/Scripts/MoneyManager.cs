@@ -8,11 +8,12 @@ public class MoneyManager : MonoBehaviour
     public float balance = 100;
     public GameObject towerPrefab;
     Text balanceTxt;
+    public bool placeMode = false;
+    GameObject currentTower;
 
 	// Use this for initialization
 	void Start ()
     {
-        Instantiate(towerPrefab, new Vector3(0, 0, -4), Quaternion.identity);
         balanceTxt = transform.GetChild(0).GetChild(0).GetComponent<Text>();
     }
 	
@@ -20,5 +21,22 @@ public class MoneyManager : MonoBehaviour
 	void Update ()
     {
         balanceTxt.text = "Money: " + balance;
+
+        if (!placeMode)
+        {
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                currentTower = Instantiate(towerPrefab, new Vector3(0, 0, -4), Quaternion.identity);
+                placeMode = true;
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                Destroy(currentTower);
+                placeMode = false;
+            }
+        }
 	}
 }
