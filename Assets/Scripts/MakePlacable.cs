@@ -50,4 +50,20 @@ public class MakePlacable : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (!ts.placed)
+        {
+            if (other.gameObject.tag.Equals("PathBox") || other.gameObject.tag.Equals("Castle"))
+            {
+                tm.placable = false;
+                transform.parent.parent.GetChild(0).GetChild(0).GetComponent<Renderer>().material.color = Color.red;
+                transform.parent.parent.GetChild(0).GetChild(1).GetComponent<Renderer>().material.color = Color.red;
+                transform.parent.parent.GetChild(0).GetChild(2).GetComponent<Renderer>().material.color = Color.red;
+                transform.parent.parent.GetChild(1).GetChild(0).GetComponent<Renderer>().material.color = Color.red;
+                transform.parent.parent.GetChild(1).GetChild(1).GetComponent<Renderer>().material.color = Color.red;
+            }
+        }
+    }
 }
