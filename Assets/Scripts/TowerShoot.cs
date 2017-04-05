@@ -29,7 +29,10 @@ public class TowerShoot : MonoBehaviour
                 CheckIfEnemyIsDead(targets[0]);
                 if (targets.Count > 0)
                 {
-                    OrientToEnemy(targets[0]);
+                    if (targets[0] != null)
+                    {
+                        OrientToEnemy(targets[0]);
+                    }
                     if (Time.time > shootTimer)
                     {
                         ShootEnemy();
