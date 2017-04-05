@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44659358, g: 0.49642974, b: 0.574825, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -120,10 +120,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 1711117117057132, guid: 04822b15f078dd74097deea6a9d0774a, type: 2}
-  - {fileID: 1711117117057132, guid: 04822b15f078dd74097deea6a9d0774a, type: 2}
-  - {fileID: 1711117117057132, guid: 04822b15f078dd74097deea6a9d0774a, type: 2}
-  enemyCreationTime: 3
+  - {fileID: 1398290105327212, guid: 5e219b54bf0bd41f19acd89adde17536, type: 2}
+  - {fileID: 1840198245817858, guid: 62e184ab795474744b32e3bac7cab0cf, type: 2}
+  - {fileID: 1384593254160960, guid: 88b511e26ea034498a8379f660d96e85, type: 2}
+  - {fileID: 1251693364679656, guid: c46508efea00540d993e8a3257928779, type: 2}
+  enemyCreationTime: 0.7
+  enemyOrder: 1,0,1,0,1,0,1,1,1,0,0,1,1,1,0,0,0,2,2,0,0,1,0,2,0,1,0,2,0,1,0,1,0,2,0,2,0,1,0,1,2,2,2,0,2,2,2,2,0,0,1,2,0,1,2,3,2,3,0,2,3,1,0,0,3,3,0,0,3,3,0,3,3,0,3,3,0,3,3,3,0,0,0,4,0,0,4,0,4,0,4,4,4,4,0,0,2,4,2,4,2,4,2,4
 --- !u!4 &153468685
 Transform:
   m_ObjectHideFlags: 0
@@ -149,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a89cc7548eef9240aacf695dc90cafe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balance: 100
+  balance: 30
   towerPrefab: {fileID: 1455798121623554, guid: e8ba8f2418686664ebc9b619396c4cab,
     type: 2}
   placeMode: 0
@@ -668,7 +670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 106, y: -23}
+  m_AnchoredPosition: {x: 186, y: -23}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1044934039

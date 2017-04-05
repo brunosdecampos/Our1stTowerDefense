@@ -606,7 +606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   placable: 1
   oldColors: []
-  towerCost: 25
+  towerCost: 10
 --- !u!135 &135070760873960928
 SphereCollider:
   m_ObjectHideFlags: 1
