@@ -7,9 +7,10 @@ public class MoneyManager : MonoBehaviour
 {
     public int balance = 100;
     public List<GameObject> towerPrefab;
+    public GameObject upgraderPrefab;
     Text balanceTxt;
     public bool placeMode = false;
-    GameObject currentTower;
+    GameObject currentObject;
 
 	// Use this for initialization
 	void Start ()
@@ -26,25 +27,31 @@ public class MoneyManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                currentTower = Instantiate(towerPrefab[0], new Vector3(0, 0, -4), Quaternion.identity);
+                currentObject = Instantiate(towerPrefab[0], new Vector3(0, 0, -4), Quaternion.identity);
                 placeMode = true;
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                currentTower = Instantiate(towerPrefab[1], new Vector3(0, 0, -4), Quaternion.identity);
+                currentObject = Instantiate(towerPrefab[1], new Vector3(0, 0, -4), Quaternion.identity);
                 placeMode = true;
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                currentTower = Instantiate(towerPrefab[2], new Vector3(0, 0, -4), Quaternion.identity);
+                currentObject = Instantiate(towerPrefab[2], new Vector3(0, 0, -4), Quaternion.identity);
+                placeMode = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.U))
+            {
+                currentObject = Instantiate(upgraderPrefab, new Vector3(0, 0, -4), Quaternion.identity);
                 placeMode = true;
             }
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3))
+            if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) ||
+                Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.U))
             {
-                Destroy(currentTower);
+                Destroy(currentObject);
                 placeMode = false;
             }
         }
