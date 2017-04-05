@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44659358, g: 0.49642974, b: 0.574825, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -157,8 +157,8 @@ MonoBehaviour:
   balance: 30
   towerPrefab:
   - {fileID: 1455798121623554, guid: e8ba8f2418686664ebc9b619396c4cab, type: 2}
-  - {fileID: 1455798121623554, guid: e8ba8f2418686664ebc9b619396c4cab, type: 2}
-  - {fileID: 1455798121623554, guid: e8ba8f2418686664ebc9b619396c4cab, type: 2}
+  - {fileID: 1039150438355974, guid: 86d0eb48891124db19fcf05c9db7497e, type: 2}
+  - {fileID: 1039150438355974, guid: 86d0eb48891124db19fcf05c9db7497e, type: 2}
   placeMode: 0
 --- !u!114 &153468687
 MonoBehaviour:
