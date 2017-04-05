@@ -51,7 +51,7 @@ public class TowerMove : MonoBehaviour
                         transform.GetChild(1).GetChild(1).GetComponent<Renderer>().material.color = new Color(oldColors[4].r, oldColors[4].g, oldColors[4].b, 1);
 
                         //Enable colliders
-                        transform.GetChild(0).FindChild("Tower_Base").GetComponent<Collider>().isTrigger = false;
+                        //transform.GetChild(0).FindChild("Tower_Base").GetComponent<Collider>().isTrigger = false;
                         transform.GetChild(1).FindChild("Tower_Top").GetComponent<Collider>().enabled = true;
                     }
                 }
