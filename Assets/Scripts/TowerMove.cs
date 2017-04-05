@@ -8,6 +8,7 @@ public class TowerMove : MonoBehaviour
     public bool placable = true;
     public List<Color> oldColors;
     public int towerCost = 25;
+    public string upgradeCost;
     MoneyManager mm;
 
     // Use this for initialization

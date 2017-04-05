@@ -23,7 +23,7 @@ public class MakePlacable : MonoBehaviour
     {
         if (!ts.placed)
         {
-            if (other.gameObject.tag.Equals("PathBox"))
+            if (other.gameObject.tag.Equals("PathBox") || other.gameObject.tag.Equals("Castle"))
             {
                 tm.placable = false;
                 transform.parent.parent.GetChild(0).GetChild(0).GetComponent<Renderer>().material.color = Color.red;
@@ -39,7 +39,7 @@ public class MakePlacable : MonoBehaviour
     {
         if (!ts.placed)
         {
-            if (other.gameObject.tag.Equals("PathBox"))
+            if (other.gameObject.tag.Equals("PathBox") || other.gameObject.tag.Equals("Castle"))
             {
                 tm.placable = true;
                 transform.parent.parent.GetChild(0).GetChild(0).GetComponent<Renderer>().material.color = tm.oldColors[0];
@@ -47,6 +47,22 @@ public class MakePlacable : MonoBehaviour
                 transform.parent.parent.GetChild(0).GetChild(2).GetComponent<Renderer>().material.color = tm.oldColors[0];
                 transform.parent.parent.GetChild(1).GetChild(0).GetComponent<Renderer>().material.color = tm.oldColors[0];
                 transform.parent.parent.GetChild(1).GetChild(1).GetComponent<Renderer>().material.color = tm.oldColors[0];
+            }
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (!ts.placed)
+        {
+            if (other.gameObject.tag.Equals("PathBox") || other.gameObject.tag.Equals("Castle"))
+            {
+                tm.placable = false;
+                transform.parent.parent.GetChild(0).GetChild(0).GetComponent<Renderer>().material.color = Color.red;
+                transform.parent.parent.GetChild(0).GetChild(1).GetComponent<Renderer>().material.color = Color.red;
+                transform.parent.parent.GetChild(0).GetChild(2).GetComponent<Renderer>().material.color = Color.red;
+                transform.parent.parent.GetChild(1).GetChild(0).GetComponent<Renderer>().material.color = Color.red;
+                transform.parent.parent.GetChild(1).GetChild(1).GetComponent<Renderer>().material.color = Color.red;
             }
         }
     }

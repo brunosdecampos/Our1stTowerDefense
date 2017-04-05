@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 54843646886122480}
   - component: {fileID: 114843235058869368}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: Projectile1
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98efcecc6e181d4479b45083ab855f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  projectileStrength: 1
 --- !u!135 &135379827054906706
 SphereCollider:
   m_ObjectHideFlags: 1

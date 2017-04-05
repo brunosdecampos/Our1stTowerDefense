@@ -29,7 +29,10 @@ public class TowerShoot : MonoBehaviour
                 CheckIfEnemyIsDead(targets[0]);
                 if (targets.Count > 0)
                 {
-                    OrientToEnemy(targets[0]);
+                    if (targets[0] != null)
+                    {
+                        OrientToEnemy(targets[0]);
+                    }
                     if (Time.time > shootTimer)
                     {
                         ShootEnemy();
@@ -49,7 +52,15 @@ public class TowerShoot : MonoBehaviour
 
     void OrientToEnemy(GameObject enemy)
     {
-        Vector3 enemyPos = enemy.transform.position + enemy.GetComponent<Rigidbody>().velocity / 3;
+        Vector3 enemyPos = new Vector3();
+        if (enemy.GetComponent<Rigidbody>().velocity.magnitude < 3)
+        {
+            enemyPos = enemy.transform.position + enemy.GetComponent<Rigidbody>().velocity / 3;
+        }
+        else
+        {
+            enemyPos = enemy.transform.position + enemy.GetComponent<Rigidbody>().velocity / 2;
+        }
         dir = enemyPos - transform.position;
         Debug.DrawRay(transform.position, dir);
         dir.y = 0;
