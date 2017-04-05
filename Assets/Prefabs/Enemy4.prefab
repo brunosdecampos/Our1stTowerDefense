@@ -206,6 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 12
   enemyReward: 7
+  killScore: 10
 --- !u!114 &114540810247978696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -231,3 +232,4 @@ MonoBehaviour:
   seekFactor: 0.1
   numOfWaypoints: 6
   maxSpeed: 5
+  enemyStrength: 1

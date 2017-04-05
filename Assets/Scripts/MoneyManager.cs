@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MoneyManager : MonoBehaviour
 {
-    public float balance = 100;
+    public int balance = 100;
     public GameObject towerPrefab;
     Text balanceTxt;
     public bool placeMode = false;

@@ -10,6 +10,8 @@ public class EnemyProperties : MonoBehaviour
     MoneyManager mm;
     GameObject gameController;
     GameController gc;
+    Score score;
+    public int killScore = 10;
 
 	// Use this for initialization
 	void Start ()
@@ -18,6 +20,7 @@ public class EnemyProperties : MonoBehaviour
         gameController = GameObject.FindGameObjectWithTag("GameController");
         mm = gameController.GetComponent<MoneyManager>();
         gc = gameController.GetComponent<GameController>();
+        score = gameController.GetComponent<Score>();
 	}
 	
 	// Update is called once per frame
@@ -29,6 +32,7 @@ public class EnemyProperties : MonoBehaviour
             {
                 Destroy(gameObject);
                 mm.balance += enemyReward;
+                score.scoreNum += killScore;
             }
             else
             {

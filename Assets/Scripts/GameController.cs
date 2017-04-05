@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour {
 	int enemyIndex; // next enemy
     public Text winText;
     EnemyProperties castle_ep;
+    Score score;
+    MoneyManager mm;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +21,8 @@ public class GameController : MonoBehaviour {
         winText = transform.GetChild(0).GetChild(2).GetComponent<Text>();
         winText.text = "";
         castle_ep = GameObject.FindGameObjectWithTag("Castle").GetComponent<EnemyProperties>();
+        score = GetComponent<Score>();
+        mm = GetComponent<MoneyManager>();
     }
 	
 	// Update is called once per frame
@@ -50,6 +54,9 @@ public class GameController : MonoBehaviour {
                 {
                     winText.text = "YOU WIN!";
                     //TODO: total score here
+                    score.scoreNum += score.levelClearBonus;
+                    score.scoreNum += mm.balance * score.moneyBonus;
+                    score.scoreNum += castle_ep.GetHealth() * score.castleBonus;
                 }
             }
         }
