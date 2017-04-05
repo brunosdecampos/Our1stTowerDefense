@@ -33,7 +33,13 @@ public class EnemyProperties : MonoBehaviour
             else
             {
                 gc.winText.text = "You lost...";
-                Time.timeScale = 0;
+                GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+                foreach (GameObject enemy in enemies)
+                {
+                    Destroy(enemy);
+                }
+                GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().enabled = false;
+                Destroy(gameObject);
             }
         }
 	}

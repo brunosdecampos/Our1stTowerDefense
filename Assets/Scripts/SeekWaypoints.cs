@@ -15,6 +15,7 @@ public class SeekWaypoints : MonoBehaviour
     public float maxSpeed = 5;
     float velMag;
     EnemyProperties castle_ep;
+    public int enemyStrength = 1;
 
     // Use this for initialization
     void Start ()
@@ -44,7 +45,7 @@ public class SeekWaypoints : MonoBehaviour
             }
             else
             {
-                castle_ep.ChangeHealth(-1);
+                castle_ep.ChangeHealth(-enemyStrength);
                 Destroy(gameObject);
             }
         }

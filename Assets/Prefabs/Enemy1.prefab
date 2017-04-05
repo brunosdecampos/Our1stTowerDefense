@@ -231,3 +231,4 @@ MonoBehaviour:
   seekFactor: 0.1
   numOfWaypoints: 6
   maxSpeed: 3
+  enemyStrength: 1

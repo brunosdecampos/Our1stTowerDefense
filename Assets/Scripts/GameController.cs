@@ -11,12 +11,14 @@ public class GameController : MonoBehaviour {
 	float timer = 0;
 	int enemyIndex; // next enemy
     public Text winText;
+    EnemyProperties castle_ep;
 
 	// Use this for initialization
 	void Start () {
 		enemyIndex = 0;
         winText = transform.GetChild(0).GetChild(2).GetComponent<Text>();
         winText.text = "";
+        castle_ep = GameObject.FindGameObjectWithTag("Castle").GetComponent<EnemyProperties>();
     }
 	
 	// Update is called once per frame
@@ -44,7 +46,11 @@ public class GameController : MonoBehaviour {
         {
             if(GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
             {
-                winText.text = "YOU WIN!";
+                if (castle_ep.GetHealth() > 0)
+                {
+                    winText.text = "YOU WIN!";
+                    //TODO: total score here
+                }
             }
         }
 	}
