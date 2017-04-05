@@ -21,8 +21,8 @@ public class GameController : MonoBehaviour {
 
 		if (enemyIndex < enemyOrder.Split (',').GetLength(0)) {	// if the enemyOrder is not finished
 			if (Time.time > timer) {
-				Debug.Log("index: "+enemyIndex.ToString()+": "+(string)enemyOrder.Split(',')[enemyIndex]);
-				enemyType = System.Convert.ToInt32 ((string)enemyOrder.Split (',')[enemyIndex]);
+				Debug.Log("index: "+enemyIndex.ToString()+": "+ enemyOrder.Split(',')[enemyIndex]);
+				enemyType = System.Convert.ToInt32 (enemyOrder.Split(',')[enemyIndex]);
 				enemyIndex++;
 //				Debug.Log (enemyType.ToString ());
 
@@ -36,5 +36,12 @@ public class GameController : MonoBehaviour {
 
 			}
 		}
+        else
+        {
+            if(GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
+            {
+                Debug.Log("game over");
+            }
+        }
 	}
 }
