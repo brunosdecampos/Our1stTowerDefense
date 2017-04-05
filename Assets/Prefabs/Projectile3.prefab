@@ -25,8 +25,8 @@ GameObject:
   - component: {fileID: 54843646886122480}
   - component: {fileID: 114843235058869368}
   m_Layer: 0
-  m_Name: Projectile2
-  m_TagString: ProjectileSteel
+  m_Name: Projectile3
+  m_TagString: ProjectileFire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1307121212994332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.460056, y: 0.6935518, z: -8.09417}
-  m_LocalScale: {x: 0.38710356, y: 0.38710356, z: 0.38710356}
+  m_LocalPosition: {x: 11.831413, y: 0.6935518, z: -7.769989}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 27ac7666fd573064eb75b6666507af6a, type: 2}
+  - {fileID: 2100000, guid: 63c730785a9bed641ab0a1fa94668b5b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98efcecc6e181d4479b45083ab855f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileStrength: 2
+  projectileStrength: 3
 --- !u!135 &135379827054906706
 SphereCollider:
   m_ObjectHideFlags: 1
