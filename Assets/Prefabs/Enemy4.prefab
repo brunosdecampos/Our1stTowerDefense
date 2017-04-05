@@ -206,7 +206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 12
   enemyReward: 7
-  killScore: 10
+  killScore: 50
+  scoreDownDelay: 1
 --- !u!114 &114540810247978696
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -168,7 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c85e7cc5aa24a4ab0bdb5b65cede47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  scoreNum: 0
+  moneyBonus: 100
+  castleBonus: 250
+  levelClearBonus: 1000
 --- !u!1001 &170533132
 Prefab:
   m_ObjectHideFlags: 0

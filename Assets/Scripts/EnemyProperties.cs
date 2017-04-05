@@ -12,6 +12,8 @@ public class EnemyProperties : MonoBehaviour
     GameController gc;
     Score score;
     public int killScore = 10;
+    float scoreTimer;
+    public float scoreDownDelay = 2;
 
 	// Use this for initialization
 	void Start ()
@@ -21,11 +23,20 @@ public class EnemyProperties : MonoBehaviour
         mm = gameController.GetComponent<MoneyManager>();
         gc = gameController.GetComponent<GameController>();
         score = gameController.GetComponent<Score>();
+        scoreTimer = Time.time + scoreDownDelay;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
+        if (killScore > 1)
+        {
+            if (Time.time > scoreTimer)
+            {
+                killScore--;
+                scoreTimer = Time.time + scoreDownDelay;
+            }
+        }
         if(health <= 0)
         {
             if (gameObject.tag.Equals("Enemy"))
