@@ -51,11 +51,6 @@ public class TowerMove : MonoBehaviour
                     transform.GetChild(1).FindChild("Tower_Top").GetComponent<Collider>().enabled = true;
 
                     mm.balance -= towerCost;
-
-                    if(mm.balance >= towerCost)
-                    {
-                        Instantiate(mm.towerPrefab, new Vector3(0, 0, -4), Quaternion.identity);
-                    }
                 }
             }
         }

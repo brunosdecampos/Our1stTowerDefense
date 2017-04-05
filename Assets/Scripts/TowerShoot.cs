@@ -12,6 +12,7 @@ public class TowerShoot : MonoBehaviour
     public GameObject projectilePrefab;
     public float projSpeed = 10;
     public bool placed = true;
+    MoneyManager mm;
 
 	// Use this for initialization
 	void Start ()
