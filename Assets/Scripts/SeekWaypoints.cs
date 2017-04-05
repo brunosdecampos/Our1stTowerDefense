@@ -14,6 +14,7 @@ public class SeekWaypoints : MonoBehaviour
     public int numOfWaypoints = 6;
     public float maxSpeed = 5;
     float velMag;
+    EnemyProperties castle_ep;
 
     // Use this for initialization
     void Start ()
@@ -25,6 +26,7 @@ public class SeekWaypoints : MonoBehaviour
             waypoints.Add(GameObject.Find("Waypoint_" + i));
         }
         seekPos = waypoints[seek_i].transform.position;
+        castle_ep = GameObject.FindGameObjectWithTag("Castle").GetComponent<EnemyProperties>();
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class SeekWaypoints : MonoBehaviour
             }
             else
             {
+                castle_ep.ChangeHealth(-1);
                 Destroy(gameObject);
             }
         }

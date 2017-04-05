@@ -9,6 +9,7 @@ TagManager:
   - Projectile
   - KillPlane
   - PathBox
+  - Castle
   layers:
   - Default
   - TransparentFX

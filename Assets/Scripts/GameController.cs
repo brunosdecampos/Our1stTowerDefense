@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
@@ -9,11 +10,14 @@ public class GameController : MonoBehaviour {
 	public string enemyOrder;
 	float timer = 0;
 	int enemyIndex; // next enemy
+    public Text winText;
 
 	// Use this for initialization
 	void Start () {
 		enemyIndex = 0;
-	}
+        winText = transform.GetChild(0).GetChild(2).GetComponent<Text>();
+        winText.text = "";
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -40,7 +44,7 @@ public class GameController : MonoBehaviour {
         {
             if(GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
             {
-                Debug.Log("game over");
+                winText.text = "YOU WIN!";
             }
         }
 	}

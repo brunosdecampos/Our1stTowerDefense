@@ -23,7 +23,7 @@ public class MakePlacable : MonoBehaviour
     {
         if (!ts.placed)
         {
-            if (other.gameObject.tag.Equals("PathBox"))
+            if (other.gameObject.tag.Equals("PathBox") || other.gameObject.tag.Equals("Castle"))
             {
                 tm.placable = false;
                 transform.parent.parent.GetChild(0).GetChild(0).GetComponent<Renderer>().material.color = Color.red;
@@ -39,7 +39,7 @@ public class MakePlacable : MonoBehaviour
     {
         if (!ts.placed)
         {
-            if (other.gameObject.tag.Equals("PathBox"))
+            if (other.gameObject.tag.Equals("PathBox") || other.gameObject.tag.Equals("Castle"))
             {
                 tm.placable = true;
                 transform.parent.parent.GetChild(0).GetChild(0).GetComponent<Renderer>().material.color = tm.oldColors[0];

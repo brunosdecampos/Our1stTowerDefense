@@ -8,12 +8,16 @@ public class EnemyProperties : MonoBehaviour
     int health;
     public int enemyReward = 5;
     MoneyManager mm;
+    GameObject gameController;
+    GameController gc;
 
 	// Use this for initialization
 	void Start ()
     {
         health = maxHealth;
-        mm = GameObject.FindGameObjectWithTag("GameController").GetComponent<MoneyManager>();
+        gameController = GameObject.FindGameObjectWithTag("GameController");
+        mm = gameController.GetComponent<MoneyManager>();
+        gc = gameController.GetComponent<GameController>();
 	}
 	
 	// Update is called once per frame
@@ -21,8 +25,16 @@ public class EnemyProperties : MonoBehaviour
     {
         if(health <= 0)
         {
-            mm.balance += enemyReward;
-            Destroy(gameObject);
+            if (gameObject.tag.Equals("Enemy"))
+            {
+                Destroy(gameObject);
+                mm.balance += enemyReward;
+            }
+            else
+            {
+                gc.winText.text = "You lost...";
+                Time.timeScale = 0;
+            }
         }
 	}
 
