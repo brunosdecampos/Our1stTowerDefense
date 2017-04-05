@@ -52,20 +52,26 @@ public class UpgraderMove : MonoBehaviour
         {
             if (other.transform.parent.parent != null)
             {
-                target = other.transform.parent.parent.gameObject;
-                GetComponent<Renderer>().material.color = Color.green;
+                if (other.transform.parent.parent.gameObject.tag.Equals("Tower"))
+                {
+                    target = other.transform.parent.parent.gameObject;
+                    GetComponent<Renderer>().material.color = Color.green;
+                }
             }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.parent.parent.gameObject.tag.Equals("PathBox"))
+        if (other.gameObject.tag.Equals("PathBox"))
         {
             if (other.transform.parent.parent != null)
             {
-                target = null;
-                GetComponent<Renderer>().material.color = Color.white;
+                if (other.transform.parent.parent.gameObject.tag.Equals("Tower"))
+                {
+                    target = null;
+                    GetComponent<Renderer>().material.color = Color.white;
+                }
             }
         }
     }

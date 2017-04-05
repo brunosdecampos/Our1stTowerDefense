@@ -4,16 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - ProjectileFire
+  - Projectile
   - Waypoint
   - Enemy
-  - KillPlane
   - PathBox
-  - Castle
-  - ProjectileFire
-  - ProjectileWood
   - ProjectileSteel
-  - Projectile
   - Tower
+  - Castle
+  - KillPlane
   layers:
   - Default
   - TransparentFX
