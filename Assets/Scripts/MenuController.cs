@@ -3,27 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuController : MonoBehaviour {
-
+public class MenuController : MonoBehaviour
+{
 	public GameObject optionsContainer;
 
-	void Start () {
-
+	void Start ()
+    {
 		optionsContainer = GameObject.FindGameObjectWithTag ("OptionsContainer");
 		// optionsContainer.SetActive (true); // optionsContainer.enabled = false;
-
 	}
 
-	public void PlayGame () {
-
-		// SceneManager.LoadScene("Level1", LoadSceneMode.Additive);
-		
+	public void PlayGame ()
+    {
+        SceneManager.LoadScene("Level1");
 	}
 
-	public void QuitGame () {
-
+	public void QuitGame ()
+    {
 		Application.Quit();
-
 	}
 
 }
