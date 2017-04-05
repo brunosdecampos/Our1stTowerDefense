@@ -10,6 +10,7 @@ public class TowerMove : MonoBehaviour
     public int towerCost = 25;
     public string upgradeCost;
     MoneyManager mm;
+    public string[] upgradeCostPerLevel;
 
     // Use this for initialization
     void Start ()
@@ -22,6 +23,7 @@ public class TowerMove : MonoBehaviour
         oldColors.Add(transform.GetChild(1).GetChild(0).GetComponent<Renderer>().material.color);
         oldColors.Add(transform.GetChild(1).GetChild(1).GetComponent<Renderer>().material.color);
         mm = GameObject.FindGameObjectWithTag("GameController").GetComponent<MoneyManager>();
+        upgradeCostPerLevel = upgradeCost.Split(',');
     }
 	
 	// Update is called once per frame

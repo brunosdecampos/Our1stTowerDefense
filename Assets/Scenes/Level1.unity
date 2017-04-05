@@ -158,7 +158,7 @@ MonoBehaviour:
   towerPrefab:
   - {fileID: 1455798121623554, guid: e8ba8f2418686664ebc9b619396c4cab, type: 2}
   - {fileID: 1039150438355974, guid: 86d0eb48891124db19fcf05c9db7497e, type: 2}
-  - {fileID: 1039150438355974, guid: 86d0eb48891124db19fcf05c9db7497e, type: 2}
+  - {fileID: 1441835611930772, guid: c6b507fd9206844aebac20ac9aae2e52, type: 2}
   upgraderPrefab: {fileID: 1466561561573292, guid: 82f4d5034c51c864aa0ff8ffb5fda188,
     type: 2}
   placeMode: 0

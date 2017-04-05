@@ -42,8 +42,8 @@ public class GameController : MonoBehaviour {
 
 		if (enemyIndex < enemyList.Length) {	// if the enemyOrder is not finished
 			if (Time.time > timer) {
-				Debug.Log("index: "+enemyIndex.ToString()+": "+ enemyOrder.Split(',')[enemyIndex]);
-				enemyType = System.Convert.ToInt32 (enemyOrder.Split(',')[enemyIndex]);
+				Debug.Log("index: " + enemyIndex.ToString() + ": " + enemyList[enemyIndex]);
+				enemyType = System.Convert.ToInt32 (enemyList[enemyIndex]);
 				enemyIndex++;
 //				Debug.Log (enemyType.ToString ());
 

@@ -37,9 +37,10 @@ GameObject:
   - component: {fileID: 4519159327962836}
   - component: {fileID: 114972760964526346}
   - component: {fileID: 54671307963921096}
+  - component: {fileID: 114689117286952428}
   m_Layer: 0
   m_Name: Tower2
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -676,6 +677,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2688aac76614d44c8494ccaba0bec84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114689117286952428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1039150438355974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cc55f0073251e941b2f92b2b705d122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeLevel: 1
 --- !u!114 &114972760964526346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -690,7 +703,8 @@ MonoBehaviour:
   placable: 1
   oldColors: []
   towerCost: 15
-  upgradeCost: 2,4,6,10
+  upgradeCost: 20,40,70,120
+  upgradeCostPerLevel: []
 --- !u!135 &135992681681036484
 SphereCollider:
   m_ObjectHideFlags: 1

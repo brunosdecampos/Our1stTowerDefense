@@ -12,6 +12,8 @@ TagManager:
   - ProjectileFire
   - ProjectileWood
   - ProjectileSteel
+  - Projectile
+  - Tower
   layers:
   - Default
   - TransparentFX
