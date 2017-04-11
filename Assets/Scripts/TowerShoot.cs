@@ -12,9 +12,10 @@ public class TowerShoot : MonoBehaviour
     public GameObject projectilePrefab;
     public float projSpeed = 10;
     public bool placed = true;
+    public float projDamageFactor = 1;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         targets = new List<GameObject>();
     }
@@ -73,6 +74,7 @@ public class TowerShoot : MonoBehaviour
         spawnPos.y = 0.5f;
         GameObject projectile = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
         projectile.GetComponent<Rigidbody>().velocity = dir.normalized * projSpeed;
+        projectile.GetComponent<ResolveDamage>().projectileStrength *= Mathf.RoundToInt(projDamageFactor);
         shootTimer = Time.time + shotInterval;
     }
 }

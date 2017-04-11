@@ -691,10 +691,12 @@ MonoBehaviour:
   oldColors: []
   towerCost: 10
   upgradeCost: 15,20,32,50,80
-  upgradeDamageFactor: '1.2, '
-  upgradeRange: 
+  upgradeDamageFactor: 2,3,5,7,10
+  upgradeRange: 6,7,8,9,10
   placable: 1
   upgradeCostPerLevel: []
+  upgradeDamageFactorPerLevel: []
+  upgradeRangePerLevel: []
 --- !u!114 &114807620997536054
 MonoBehaviour:
   m_ObjectHideFlags: 1

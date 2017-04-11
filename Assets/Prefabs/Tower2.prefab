@@ -700,11 +700,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05e5227bf8715f14eb9a5455ea95691f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placable: 1
   oldColors: []
   towerCost: 15
   upgradeCost: 20,40,70,120
+  upgradeDamageFactor: 1.5,2,3,5
+  upgradeRange: 6,7,8.5,10
+  placable: 1
   upgradeCostPerLevel: []
+  upgradeDamageFactorPerLevel: []
+  upgradeRangePerLevel: []
 --- !u!135 &135992681681036484
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -11,8 +11,10 @@ public class TowerMove : MonoBehaviour
 	public string upgradeRange;
 	public bool placable = true;
 	public string[] upgradeCostPerLevel;
+    public string[] upgradeDamageFactorPerLevel;
+    public string[] upgradeRangePerLevel;
 
-	TowerShoot ts;
+    TowerShoot ts;
 	MoneyManager mm;
 
     // Use this for initialization
@@ -27,6 +29,8 @@ public class TowerMove : MonoBehaviour
         oldColors.Add(transform.GetChild(1).GetChild(1).GetComponent<Renderer>().material.color);
         mm = GameObject.FindGameObjectWithTag("GameController").GetComponent<MoneyManager>();
         upgradeCostPerLevel = upgradeCost.Split(',');
+        upgradeDamageFactorPerLevel = upgradeDamageFactor.Split(',');
+        upgradeRangePerLevel = upgradeRange.Split(',');
     }
 	
 	// Update is called once per frame

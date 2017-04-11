@@ -32,7 +32,7 @@ public class ResolveDamage : MonoBehaviour
 				factor = ep.strengthFactor;
 			}
 
-			ep.ChangeHealth((int)Mathf.Round(-projectileStrength * factor));
+			ep.ChangeHealth(Mathf.RoundToInt(-projectileStrength * factor));
             Destroy(gameObject);
         }
         else if (other.gameObject.tag.Equals("KillPlane"))

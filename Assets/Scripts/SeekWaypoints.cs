@@ -36,7 +36,7 @@ public class SeekWaypoints : MonoBehaviour
     {
         Seek();
 		//Debug.Log((seekPos - transform.position).magnitude);
-		if ((seekPos - transform.position).magnitude < 0.7f)
+		if ((seekPos - transform.position).magnitude < seekFactor * maxSpeed)
         {
             //Debug.Log("Reached waypoint " + seek_i);
             if (seek_i < waypoints.Count - 1)

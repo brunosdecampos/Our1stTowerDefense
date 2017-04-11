@@ -34,9 +34,7 @@ public class UpgraderMove : MonoBehaviour
                     if (Input.GetMouseButtonDown(0))
                     {
                         mm.balance -= int.Parse(tm.upgradeCostPerLevel[mul.upgradeLevel - 1]);
-                        target.transform.GetChild(1).GetComponent<TowerShoot>().shotInterval /= 2f;
-                        mul.upgradeLevel++;
-                        mul.UpdateText();
+                        mul.Upgrade(tm);
 
                         mm.placeMode = false;
                         Destroy(gameObject);
