@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour {
 	public float enemyCreationTime = 1;
 	public float enemyDelayTime = 4;
 	public string enemyOrder;
+	public Vector3 startPos;
+	public int numOfWaypoints = 6;
 	float timer = 0;
 	int enemyIndex; // next enemy
 	int enemyTotal;
@@ -35,7 +37,7 @@ public class GameController : MonoBehaviour {
         score = GetComponent<Score>();
         mm = GetComponent<MoneyManager>();
     }
-	
+
 	// Update is called once per frame
 	void Update () {
 		int enemyType;
@@ -50,7 +52,7 @@ public class GameController : MonoBehaviour {
 				timer = Time.time + enemyCreationTime;
 
 				if (enemyType > 0) { // is there an enemy in turn?
-					Instantiate (enemyPrefab [enemyType - 1], new Vector3 (-17, 0.5f, -8), Quaternion.identity);
+					Instantiate (enemyPrefab [enemyType - 1], startPos, Quaternion.identity);
 					enemyTotal--;
 					enemyLeftText.text = "Enemies left: " + enemyTotal.ToString ();
 				} else {

@@ -11,18 +11,19 @@ public class SeekWaypoints : MonoBehaviour
     Vector3 vel;
     public float seekFactor;
     Rigidbody rb;
-    public int numOfWaypoints = 6;
     public float maxSpeed = 5;
     float velMag;
     EnemyProperties castle_ep;
     public int enemyStrength = 1;
+	GameController controller;
 
     // Use this for initialization
     void Start ()
     {
+		controller = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController>();
         waypoints = new List<GameObject>();
         rb = GetComponent<Rigidbody>();
-        for (int i = 0; i < numOfWaypoints; i++)
+		for (int i = 0; i < controller.numOfWaypoints; i++)
         {
             waypoints.Add(GameObject.Find("Waypoint_" + i));
         }
