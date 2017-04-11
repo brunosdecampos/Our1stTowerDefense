@@ -219,6 +219,10 @@ MonoBehaviour:
   enemyReward: 1
   killScore: 50
   scoreDownDelay: 1
+  weakness: ProjectileWood
+  weaknessFactor: 10
+  strength: ProjectileSteel
+  strengthFactor: 0
 --- !u!114 &114704468793369828
 MonoBehaviour:
   m_ObjectHideFlags: 1

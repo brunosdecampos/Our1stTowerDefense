@@ -20,7 +20,7 @@ public class UpgraderMove : MonoBehaviour
     {
         Vector3 mousePos = Input.mousePosition;
         Vector3 pos = Camera.main.ScreenToWorldPoint(mousePos);
-        pos.y = 0;
+        pos.y = 4.5f;
         transform.position = pos;
 
         if (target != null)

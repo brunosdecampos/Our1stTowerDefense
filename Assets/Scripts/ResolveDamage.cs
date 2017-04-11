@@ -18,10 +18,21 @@ public class ResolveDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag.Equals("Enemy"))
+		float factor = 1;
+		if(other.gameObject.tag.Equals("Enemy"))
         {
-            EnemyProperties ep = other.gameObject.GetComponent<EnemyProperties>();
-            ep.ChangeHealth(-projectileStrength);
+			EnemyProperties ep = other.gameObject.GetComponent<EnemyProperties>();
+
+			if (gameObject.tag.Equals (ep.weakness) ) 
+			{
+				factor = ep.weaknessFactor;
+			} 
+			else if (gameObject.tag.Equals (ep.strength) ) 
+			{
+				factor = ep.strengthFactor;
+			}
+
+			ep.ChangeHealth((int)Mathf.Round(-projectileStrength * factor));
             Destroy(gameObject);
         }
         else if (other.gameObject.tag.Equals("KillPlane"))

@@ -208,6 +208,10 @@ MonoBehaviour:
   enemyReward: 7
   killScore: 50
   scoreDownDelay: 1
+  weakness: fire
+  weaknessFactor: 1.5
+  strength: wood
+  strengthFactor: 0.5
 --- !u!114 &114540810247978696
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -42,7 +42,7 @@ public class MoneyManager : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.U))
             {
-                currentObject = Instantiate(upgraderPrefab, new Vector3(0, 0, -4), upgraderPrefab.transform.rotation);
+                currentObject = Instantiate(upgraderPrefab, new Vector3(0, 5, -4), upgraderPrefab.transform.rotation);
                 placeMode = true;
             }
         }

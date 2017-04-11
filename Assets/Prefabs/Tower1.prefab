@@ -569,8 +569,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.2478933, y: 5.1681676, z: 6.15312}
-  m_Center: {x: 0.020296216, y: -0.015009526, z: -3.113049}
+  m_Size: {x: 5.2478933, y: 5.1681676, z: 9.071645}
+  m_Center: {x: 0.020296287, y: -0.014988422, z: -1.6537902}
 --- !u!65 &65699674527281380
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -688,10 +688,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05e5227bf8715f14eb9a5455ea95691f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placable: 1
   oldColors: []
   towerCost: 10
-  upgradeCost: 10,20,30,50,80
+  upgradeCost: 15,20,32,50,80
+  upgradeDamageFactor: '1.2, '
+  upgradeRange: 
+  placable: 1
   upgradeCostPerLevel: []
 --- !u!114 &114807620997536054
 MonoBehaviour:

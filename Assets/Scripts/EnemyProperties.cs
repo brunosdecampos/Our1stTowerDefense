@@ -5,16 +5,21 @@ using UnityEngine;
 public class EnemyProperties : MonoBehaviour
 {
     public int maxHealth = 3;
+	public int enemyReward = 5;
+	public int killScore = 10;
+	public float scoreDownDelay = 2;
+	public string weakness = "fire";
+	public float weaknessFactor = 1.5f;
+	public string strength = "wood";
+	public float strengthFactor = 0.5f;
+
+
+	float scoreTimer;
+	MoneyManager mm;
     int health;
-    public int enemyReward = 5;
-    MoneyManager mm;
     GameObject gameController;
     GameController gc;
     Score score;
-    public int killScore = 10;
-    float scoreTimer;
-    public float scoreDownDelay = 2;
-
 	// Use this for initialization
 	void Start ()
     {

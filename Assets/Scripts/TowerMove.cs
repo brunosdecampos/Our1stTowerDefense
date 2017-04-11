@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class TowerMove : MonoBehaviour
 {
-    TowerShoot ts;
-    public bool placable = true;
     public List<Color> oldColors;
     public int towerCost = 25;
     public string upgradeCost;
-    MoneyManager mm;
-    public string[] upgradeCostPerLevel;
+	public string upgradeDamageFactor;
+	public string upgradeRange;
+	public bool placable = true;
+	public string[] upgradeCostPerLevel;
+
+	TowerShoot ts;
+	MoneyManager mm;
 
     // Use this for initialization
     void Start ()
