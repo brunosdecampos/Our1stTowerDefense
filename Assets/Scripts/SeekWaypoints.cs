@@ -36,13 +36,14 @@ public class SeekWaypoints : MonoBehaviour
     {
         Seek();
 		//Debug.Log((seekPos - transform.position).magnitude);
-		if ((seekPos - transform.position).magnitude < seekFactor * maxSpeed)
+		if ((seekPos - transform.position).magnitude < 0.05f)
         {
             //Debug.Log("Reached waypoint " + seek_i);
             if (seek_i < waypoints.Count - 1)
             {
                 seek_i++;
                 seekPos = waypoints[seek_i].transform.position;
+                rb.velocity = Vector3.zero;
             }
             else
             {
