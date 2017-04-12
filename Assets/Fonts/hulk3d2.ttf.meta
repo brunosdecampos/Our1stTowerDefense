@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: baab30e8d753d4f62978e8554d849100
+timeCreated: 1491956643
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Hulkbusters 3D
+  fontNames:
+  - Hulkbusters 3D
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
