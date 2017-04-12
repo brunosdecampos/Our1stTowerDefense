@@ -23,9 +23,18 @@ public class GameController : MonoBehaviour {
 	string[] enemyList;
 	bool end = false;
     private const string prefsName = "lastLevelBeaten";
+    GameObject dsObj;
+    DifficultySelector ds;
+    public List<string> enemyStrings;
 
 	// Use this for initialization
 	void Start () {
+        dsObj = GameObject.FindGameObjectWithTag("DifficultyStorage");
+        if(dsObj != null)
+        {
+            ds = dsObj.GetComponent<DifficultySelector>();
+            enemyOrder = enemyStrings[ds.GetDifficultyLevel()];
+        }
 		enemyIndex = 0;
         winText = transform.GetChild(0).GetChild(2).GetComponent<Text>();
         winText.text = "";
@@ -71,21 +80,19 @@ public class GameController : MonoBehaviour {
                 {
 					end = true;
                     winText.text = "YOU WIN!";
-                    int sceneNum = SceneManager.GetActiveScene().buildIndex;
+                    int levelNum = SceneManager.GetActiveScene().buildIndex + ds.GetDifficultyLevel() * 3;
                     if (PlayerPrefs.HasKey(prefsName))
                     {
-                        if (PlayerPrefs.GetInt(prefsName) > sceneNum)
+                        if (PlayerPrefs.GetInt(prefsName) > levelNum)
                         {
-                            PlayerPrefs.SetInt(prefsName, sceneNum);
+                            PlayerPrefs.SetInt(prefsName, levelNum);
                             PlayerPrefs.Save();
-                            print(PlayerPrefs.GetInt(prefsName));
                         }
                     }
                     else
                     {
-                        PlayerPrefs.SetInt(prefsName, sceneNum);
+                        PlayerPrefs.SetInt(prefsName, levelNum);
                         PlayerPrefs.Save();
-                        print(PlayerPrefs.GetInt(prefsName));
                     }
                     transform.GetChild(0).GetChild(6).GetComponent<Button>().enabled = true;
                     transform.GetChild(0).GetChild(6).GetComponent<Image>().enabled = true;
@@ -100,6 +107,7 @@ public class GameController : MonoBehaviour {
 
     public void BackToMenu()
     {
+        Destroy(ds);
         SceneManager.LoadScene("Menu");
     }
 }
