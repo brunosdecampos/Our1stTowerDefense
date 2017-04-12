@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
@@ -21,6 +22,7 @@ public class GameController : MonoBehaviour {
 	Text enemyLeftText;
 	string[] enemyList;
 	bool end = false;
+    private const string prefsName = "lastLevelBeaten";
 
 	// Use this for initialization
 	void Start () {
@@ -69,7 +71,25 @@ public class GameController : MonoBehaviour {
                 {
 					end = true;
                     winText.text = "YOU WIN!";
-                    //TODO: total score here
+                    int sceneNum = SceneManager.GetActiveScene().buildIndex;
+                    if (PlayerPrefs.HasKey(prefsName))
+                    {
+                        if (PlayerPrefs.GetInt(prefsName) > sceneNum)
+                        {
+                            PlayerPrefs.SetInt(prefsName, sceneNum);
+                            PlayerPrefs.Save();
+                            print(PlayerPrefs.GetInt(prefsName));
+                        }
+                    }
+                    else
+                    {
+                        PlayerPrefs.SetInt(prefsName, sceneNum);
+                        PlayerPrefs.Save();
+                        print(PlayerPrefs.GetInt(prefsName));
+                    }
+                    transform.GetChild(0).GetChild(6).GetComponent<Button>().enabled = true;
+                    transform.GetChild(0).GetChild(6).GetComponent<Image>().enabled = true;
+                    transform.GetChild(0).GetChild(6).GetChild(0).GetComponent<Text>().enabled = true;
                     score.scoreNum += score.levelClearBonus;
                     score.scoreNum += mm.balance * score.moneyBonus;
                     score.scoreNum += castle_ep.GetHealth() * score.castleBonus;
@@ -77,4 +97,9 @@ public class GameController : MonoBehaviour {
             }
         }
 	}
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }

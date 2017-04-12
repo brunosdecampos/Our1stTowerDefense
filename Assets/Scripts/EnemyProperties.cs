@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyProperties : MonoBehaviour
 {
@@ -53,6 +54,9 @@ public class EnemyProperties : MonoBehaviour
             else
             {
                 gc.winText.text = "You lost...";
+                gameController.transform.GetChild(0).GetChild(6).GetComponent<Button>().enabled = true;
+                gameController.transform.GetChild(0).GetChild(6).GetComponent<Image>().enabled = true;
+                gameController.transform.GetChild(0).GetChild(6).GetChild(0).GetComponent<Text>().enabled = true;
                 GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
                 foreach (GameObject enemy in enemies)
                 {
