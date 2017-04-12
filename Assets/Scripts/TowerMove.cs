@@ -16,6 +16,7 @@ public class TowerMove : MonoBehaviour
 
     TowerShoot ts;
 	MoneyManager mm;
+    TowerOrUpgradeCost touc;
 
     // Use this for initialization
     void Start ()
@@ -27,7 +28,9 @@ public class TowerMove : MonoBehaviour
         oldColors.Add(transform.GetChild(0).GetChild(2).GetComponent<Renderer>().material.color);
         oldColors.Add(transform.GetChild(1).GetChild(0).GetComponent<Renderer>().material.color);
         oldColors.Add(transform.GetChild(1).GetChild(1).GetComponent<Renderer>().material.color);
-        mm = GameObject.FindGameObjectWithTag("GameController").GetComponent<MoneyManager>();
+        GameObject gcObj = GameObject.FindGameObjectWithTag("GameController");
+        mm = gcObj.GetComponent<MoneyManager>();
+        touc = gcObj.GetComponent<TowerOrUpgradeCost>();
         upgradeCostPerLevel = upgradeCost.Split(',');
         upgradeDamageFactorPerLevel = upgradeDamageFactor.Split(',');
         upgradeRangePerLevel = upgradeRange.Split(',');
@@ -49,6 +52,7 @@ public class TowerMove : MonoBehaviour
                 {
                     if ((mm.balance - towerCost) >= 0)
                     {
+                        touc.ShowNewText(false);
                         ts.placed = true;
                         mm.placeMode = false;
                         mm.balance -= towerCost;

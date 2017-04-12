@@ -11,11 +11,13 @@ public class MoneyManager : MonoBehaviour
     Text balanceTxt;
     public bool placeMode = false;
     GameObject currentObject;
+    TowerOrUpgradeCost touc;
 
 	// Use this for initialization
 	void Start ()
     {
         balanceTxt = transform.GetChild(0).GetChild(0).GetComponent<Text>();
+        touc = GameObject.FindGameObjectWithTag("GameController").GetComponent<TowerOrUpgradeCost>();
     }
 	
 	// Update is called once per frame
@@ -28,16 +30,22 @@ public class MoneyManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 currentObject = Instantiate(towerPrefab[0], new Vector3(0, 0, -4), Quaternion.identity);
+                touc.cost = currentObject.GetComponent<TowerMove>().towerCost;
+                touc.ShowNewText(true);
                 placeMode = true;
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 currentObject = Instantiate(towerPrefab[1], new Vector3(0, 0, -4), Quaternion.identity);
+                touc.cost = currentObject.GetComponent<TowerMove>().towerCost;
+                touc.ShowNewText(true);
                 placeMode = true;
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 currentObject = Instantiate(towerPrefab[2], new Vector3(0, 0, -4), Quaternion.identity);
+                touc.cost = currentObject.GetComponent<TowerMove>().towerCost;
+                touc.ShowNewText(true);
                 placeMode = true;
             }
             else if (Input.GetKeyDown(KeyCode.U))
@@ -51,6 +59,7 @@ public class MoneyManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) ||
                 Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.U))
             {
+                touc.ShowNewText(false);
                 Destroy(currentObject);
                 placeMode = false;
             }
