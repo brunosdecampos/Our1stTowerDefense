@@ -15,6 +15,7 @@ TagManager:
   - ProjectileWood
   - OptionsContainer
   - DifficultyStorage
+  - LevelButton
   layers:
   - Default
   - TransparentFX

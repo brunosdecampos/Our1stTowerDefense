@@ -27,6 +27,10 @@ public class DifficultySelector : MonoBehaviour
     public void LoadLevel(int level)
     {
         SceneManager.LoadScene(level);
+        if(level == 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public int GetDifficultyLevel()
