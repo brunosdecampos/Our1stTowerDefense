@@ -107,7 +107,7 @@ public class GameController : MonoBehaviour {
 
     public void BackToMenu()
     {
-        Destroy(ds);
+        Destroy(dsObj);
         SceneManager.LoadScene("Menu");
     }
 }
