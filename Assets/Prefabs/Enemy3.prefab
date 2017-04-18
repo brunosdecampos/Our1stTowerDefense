@@ -205,8 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seekFactor: 0.1
-  numOfWaypoints: 6
-  maxSpeed: 2.2
+  maxSpeed: 8
   enemyStrength: 1
 --- !u!114 &114632928345846462
 MonoBehaviour:
@@ -219,10 +218,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34d1d021c18588b46a76ef80ba8ac3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 15
-  enemyReward: 5
+  maxHealth: 5
+  enemyReward: 2
   killScore: 50
   scoreDownDelay: 1
+  weakness: 
+  weaknessFactor: 1
+  strength: ProjectileWood
+  strengthFactor: 0.8
 --- !u!114 &114979324283186294
 MonoBehaviour:
   m_ObjectHideFlags: 1

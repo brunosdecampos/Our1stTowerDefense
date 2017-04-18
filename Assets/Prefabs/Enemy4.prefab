@@ -204,14 +204,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34d1d021c18588b46a76ef80ba8ac3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 12
-  enemyReward: 7
+  maxHealth: 6
+  enemyReward: 2
   killScore: 50
   scoreDownDelay: 1
-  weakness: fire
-  weaknessFactor: 1.5
-  strength: wood
-  strengthFactor: 0.5
+  weakness: 
+  weaknessFactor: 1
+  strength: ProjectileWood
+  strengthFactor: 0.8
 --- !u!114 &114540810247978696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,6 +235,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seekFactor: 0.1
-  numOfWaypoints: 6
-  maxSpeed: 5
+  maxSpeed: 7
   enemyStrength: 1

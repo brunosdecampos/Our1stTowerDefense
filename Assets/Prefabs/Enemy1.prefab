@@ -3519,9 +3519,9 @@ MonoBehaviour:
   enemyReward: 1
   killScore: 50
   scoreDownDelay: 1
-  weakness: ProjectileWood
-  weaknessFactor: 1
-  strength: ProjectileSteel
+  weakness: ProjectileSteel
+  weaknessFactor: 2
+  strength: 
   strengthFactor: 1
 --- !u!114 &114704468793369828
 MonoBehaviour:
@@ -3535,7 +3535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seekFactor: 0.1
-  maxSpeed: 3
+  maxSpeed: 5
   enemyStrength: 1
 --- !u!137 &137012666300367504
 SkinnedMeshRenderer:
