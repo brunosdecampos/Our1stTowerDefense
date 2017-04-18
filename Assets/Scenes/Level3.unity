@@ -367,7 +367,7 @@ Prefab:
     - target: {fileID: 114842812278657756, guid: e0c04454ed5c8384296a468c41bf724b,
         type: 2}
       propertyPath: m_Text
-      value: xxxxxxx
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 224547904684599218, guid: e0c04454ed5c8384296a468c41bf724b,
         type: 2}
@@ -393,6 +393,21 @@ Prefab:
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 114129590139539894, guid: e0c04454ed5c8384296a468c41bf724b,
+        type: 2}
+      propertyPath: numOfWaypoints
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 114129590139539894, guid: e0c04454ed5c8384296a468c41bf724b,
+        type: 2}
+      propertyPath: startPos.x
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 114129590139539894, guid: e0c04454ed5c8384296a468c41bf724b,
+        type: 2}
+      propertyPath: startPos.z
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0c04454ed5c8384296a468c41bf724b, type: 2}
