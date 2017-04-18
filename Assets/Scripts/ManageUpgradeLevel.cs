@@ -30,6 +30,7 @@ public class ManageUpgradeLevel : MonoBehaviour
     public void Upgrade(TowerMove tm)
     {
         shootTrigger.radius = float.Parse(tm.upgradeRangePerLevel[upgradeLevel - 1]);
+        //ts.projSpeed = shootTrigger.radius * 2;
         ts.projDamageFactor = float.Parse(tm.upgradeDamageFactorPerLevel[upgradeLevel - 1]);
         upgradeLevel++;
         UpdateText();

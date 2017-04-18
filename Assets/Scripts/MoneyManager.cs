@@ -12,12 +12,14 @@ public class MoneyManager : MonoBehaviour
     public bool placeMode = false;
     GameObject currentObject;
     TowerOrUpgradeCost touc;
+    Pause p;
 
 	// Use this for initialization
 	void Start ()
     {
         balanceTxt = transform.GetChild(0).GetChild(0).GetComponent<Text>();
         touc = GameObject.FindGameObjectWithTag("GameController").GetComponent<TowerOrUpgradeCost>();
+        p = transform.GetChild(0).GetComponent<Pause>();
     }
 	
 	// Update is called once per frame
@@ -27,31 +29,34 @@ public class MoneyManager : MonoBehaviour
 
         if (!placeMode)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (!p.paused)
             {
-                currentObject = Instantiate(towerPrefab[0], new Vector3(0, 0, -4), Quaternion.identity);
-                touc.cost = currentObject.GetComponent<TowerMove>().towerCost;
-                touc.ShowNewText(true);
-                placeMode = true;
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                currentObject = Instantiate(towerPrefab[1], new Vector3(0, 0, -4), Quaternion.identity);
-                touc.cost = currentObject.GetComponent<TowerMove>().towerCost;
-                touc.ShowNewText(true);
-                placeMode = true;
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                currentObject = Instantiate(towerPrefab[2], new Vector3(0, 0, -4), Quaternion.identity);
-                touc.cost = currentObject.GetComponent<TowerMove>().towerCost;
-                touc.ShowNewText(true);
-                placeMode = true;
-            }
-            else if (Input.GetKeyDown(KeyCode.U))
-            {
-                currentObject = Instantiate(upgraderPrefab, new Vector3(0, 5, -4), upgraderPrefab.transform.rotation);
-                placeMode = true;
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    currentObject = Instantiate(towerPrefab[0], new Vector3(0, 0, -4), Quaternion.identity);
+                    touc.cost = currentObject.GetComponent<TowerMove>().towerCost;
+                    touc.ShowNewText(true);
+                    placeMode = true;
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    currentObject = Instantiate(towerPrefab[1], new Vector3(0, 0, -4), Quaternion.identity);
+                    touc.cost = currentObject.GetComponent<TowerMove>().towerCost;
+                    touc.ShowNewText(true);
+                    placeMode = true;
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha3))
+                {
+                    currentObject = Instantiate(towerPrefab[2], new Vector3(0, 0, -4), Quaternion.identity);
+                    touc.cost = currentObject.GetComponent<TowerMove>().towerCost;
+                    touc.ShowNewText(true);
+                    placeMode = true;
+                }
+                else if (Input.GetKeyDown(KeyCode.U))
+                {
+                    currentObject = Instantiate(upgraderPrefab, new Vector3(0, 5, -4), upgraderPrefab.transform.rotation);
+                    placeMode = true;
+                }
             }
         }
         else

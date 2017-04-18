@@ -73,7 +73,16 @@ public class TowerShoot : MonoBehaviour
         Vector3 spawnPos = transform.position;
         spawnPos.y = 0.5f;
         GameObject projectile = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
-        projectile.GetComponent<Rigidbody>().velocity = dir.normalized * projSpeed;
+        float tempProjSpeed = projSpeed;
+        if(dir.magnitude > 5)
+        {
+            tempProjSpeed += 2;
+            if (dir.magnitude > 7)
+            {
+                tempProjSpeed += 2;
+            }
+        }
+        projectile.GetComponent<Rigidbody>().velocity = dir.normalized * tempProjSpeed;
         projectile.GetComponent<ResolveDamage>().projectileStrength *= Mathf.RoundToInt(projDamageFactor);
         shootTimer = Time.time + shotInterval;
     }

@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 114783460841939982}
   - component: {fileID: 114846323290178250}
   - component: {fileID: 114114429963894446}
+  - component: {fileID: 114462131634103936}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -287,8 +288,8 @@ MonoBehaviour:
   enemyCreationTime: 0.7
   enemyDelayTime: 4
   enemyOrder: 1,0,1,0,1,0,1,1,1,0,0,1,1,1,0,0,0,2,2,0,0,1,0,2,0,1,0,2,0,1,0,1,0,2,0,2,0,1,0,1,2,2,2,0,2,2,2,2,0,0,1,2,0,1,2,3,2,3,0,2,3,1,0,0,3,3,0,0,3,3,0,3,3,0,3,3,0,3,3,3,0,0,0,4,0,0,4,0,4,0,4,4,4,4,0,0,2,4,2,4,2,4,2,4
-  startPos: {x: -16, y: 0.5, z: -8}
-  numOfWaypoints: 6
+  startPos: {x: 16, y: 0.5, z: 8}
+  numOfWaypoints: 17
   winText: {fileID: 0}
   enemyStrings:
   - 1,0,1,0,1,0,1,1,1,0,0,1,1,1,0,0,0,2,2,0,0,1,0,2,0,1,0,2,0,1,0,1,0,2,0,2,0,1,0,1,2,2,2,0,2,2,2,2,0,0,1,2,0,1,2,3,2,3,0,2,3,1,0,0,3,3,0,0,3,3,0,3,3,0,3,3,0,3,3,3,0,0,0,4,0,0,4,0,4,0,4,4,4,4,0,0,2,4,2,4,2,4,2,4
@@ -415,6 +416,18 @@ MonoBehaviour:
   upgraderPrefab: {fileID: 1466561561573292, guid: 82f4d5034c51c864aa0ff8ffb5fda188,
     type: 2}
   placeMode: 0
+--- !u!114 &114462131634103936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1164025577906598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4694d84ff42b63e4fae363765d953163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
 --- !u!114 &114469286534447518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -782,10 +795,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -1109,8 +1122,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -96.2}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -200}
+  m_SizeDelta: {x: 200, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224630082886221274
 RectTransform:

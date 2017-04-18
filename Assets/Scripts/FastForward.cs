@@ -25,6 +25,5 @@ public class FastForward : MonoBehaviour
                 Time.timeScale = 1;
             }
         }
-        print(Time.timeScale);
 	}
 }

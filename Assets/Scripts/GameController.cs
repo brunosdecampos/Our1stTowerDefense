@@ -80,7 +80,7 @@ public class GameController : MonoBehaviour {
                 {
 					end = true;
                     winText.text = "YOU WIN!";
-                    int levelNum = SceneManager.GetActiveScene().buildIndex + ds.GetDifficultyLevel() * 3;
+                    int levelNum = SceneManager.GetActiveScene().buildIndex + (dsObj != null ? ds.GetDifficultyLevel() * 3 : 0);
                     if (PlayerPrefs.HasKey(prefsName))
                     {
                         if (PlayerPrefs.GetInt(prefsName) > levelNum)
