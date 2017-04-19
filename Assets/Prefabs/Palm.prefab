@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 4026055499917334}
   - component: {fileID: 205368312766820688}
   - component: {fileID: 54489746440390946}
+  - component: {fileID: 64168923845015776}
   m_Layer: 0
   m_Name: Palm
   m_TagString: PathBox
@@ -260,7 +261,6 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23484558602438988
 MeshRenderer:
@@ -293,7 +293,6 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23485055054742010
 MeshRenderer:
@@ -328,7 +327,6 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33232414637494516
 MeshFilter:
@@ -366,6 +364,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &64168923845015776
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769606947851414}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!135 &135132708157792636
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -486,6 +498,5 @@ BillboardRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Billboard: {fileID: 22600000, guid: d027af1092f6b434090f040565e7e656, type: 3}
