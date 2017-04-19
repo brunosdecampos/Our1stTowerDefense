@@ -8,15 +8,35 @@ public class MenuController : MonoBehaviour
 {
 	private GameObject optionsContainer;
 	public Text submenuTitle, instructions, soundsOnOff, effectsOnOff;
-	private int initialXPosition = Screen.width, finalXPosition = 600, tutorialBtnCounter = 0, optionsBtnCounter = 0, submenuContainerCounter = 0, soundsBtnCounter = 0, effectsBtnCounter = 0;
+    private int initialXPosition = Screen.width, finalXPosition = 600,
+                tutorialBtnCounter = 0, optionsBtnCounter = 0;
 	private bool tutorialBtnClicked, optionsBtnClicked;
 	public AudioSource song;
+    private bool musicOn = true, effectsOn = true;
 
 	void Start ()
 	{
 		optionsContainer = GameObject.FindGameObjectWithTag ("OptionsContainer");
 		optionsContainer.transform.position += new Vector3 (initialXPosition, 0, 0);
-	}
+        if(PlayerPrefs.HasKey("MusicOn"))
+        {
+            musicOn = System.Convert.ToBoolean(PlayerPrefs.GetInt("MusicOn"));
+            if(!musicOn)
+            {
+                song.Stop();
+                soundsOnOff.text = "Music: Off";
+            }
+        }
+        if (PlayerPrefs.HasKey("EffectsOn"))
+        {
+            effectsOn = System.Convert.ToBoolean(PlayerPrefs.GetInt("EffectsOn"));
+            if (!effectsOn)
+            {
+                song.Stop();
+                effectsOnOff.text = "Sound Effects: Off";
+            }
+        }
+    }
 
 	void Update ()
 	{
@@ -85,29 +105,31 @@ public class MenuController : MonoBehaviour
 
 	public void ClickSoundsButton ()
 	{
-		soundsBtnCounter++;
-
-		if (soundsBtnCounter % 2 != 0) {
+		if (musicOn) {
 			song.Stop ();
-			soundsOnOff.text = "Sounds: Off";
+			soundsOnOff.text = "Music: Off";
+            musicOn = false;
 		} else {
 			song.Play ();
-			soundsOnOff.text = "Sounds: On";
+			soundsOnOff.text = "Music: On";
+            musicOn = true;
 		}
+        PlayerPrefs.SetInt("MusicOn", System.Convert.ToInt32(musicOn));
 	}
 
 	public void ClickEffectsButton ()
 	{
-		effectsBtnCounter++;
-
-		if (effectsBtnCounter % 2 != 0) {
+		if (effectsOn) {
 			// soundEffect.volume = 0;
-			effectsOnOff.text = "Effects: Off";
+			effectsOnOff.text = "Sound Effects: Off";
+            effectsOn = false;
 		} else {
 			// soundEffect.volume = 1;
-			effectsOnOff.text = "Effects: On";
+			effectsOnOff.text = "Sound Effects: On";
+            effectsOn = true;
 		}
-	}
+        PlayerPrefs.SetInt("EffectsOn", System.Convert.ToInt32(effectsOn));
+    }
 
 	public void QuitGame ()
     {
