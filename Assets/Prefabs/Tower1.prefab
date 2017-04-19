@@ -656,11 +656,7 @@ MonoBehaviour:
     type: 2}
   projSpeed: 12
   placed: 0
-<<<<<<< HEAD
-  projDamageFactor: 0.2
-=======
   projDamageFactor: 1
->>>>>>> origin/master
 --- !u!114 &114683443839353272
 MonoBehaviour:
   m_ObjectHideFlags: 1
