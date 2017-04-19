@@ -206,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seekFactor: 0.1
   maxSpeed: 2
-  enemyStrength: 1
+  enemyStrength: 10
 --- !u!114 &114049376210875070
 MonoBehaviour:
   m_ObjectHideFlags: 1
