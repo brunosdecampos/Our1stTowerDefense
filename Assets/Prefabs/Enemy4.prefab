@@ -235,5 +235,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seekFactor: 0.1
-  maxSpeed: 7
+  maxSpeed: 6
   enemyStrength: 1
