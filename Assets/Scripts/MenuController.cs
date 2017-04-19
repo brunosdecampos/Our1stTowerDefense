@@ -110,9 +110,11 @@ public class MenuController : MonoBehaviour
 		if (musicOn) {
 			soundsOnOff.text = "Music: Off";
             musicOn = false;
+            song.Stop();
 		} else {
 			soundsOnOff.text = "Music: On";
             musicOn = true;
+            song.Play();
 		}
         PlayerPrefs.SetInt("MusicOn", Convert.ToInt32(musicOn));
 	}
