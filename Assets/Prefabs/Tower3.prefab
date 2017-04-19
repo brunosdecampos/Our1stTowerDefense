@@ -703,12 +703,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2085453f5ade4f48beb8162eaf9c9e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotInterval: 0.5
+  shotInterval: 2
   targets: []
   projectilePrefab: {fileID: 1307121212994332, guid: 26db4057a9c75410bb0851adc261799e,
     type: 2}
-  projSpeed: 10
+  projSpeed: 9
   placed: 0
+  projDamageFactor: 3
 --- !u!135 &135279193793888514
 SphereCollider:
   m_ObjectHideFlags: 1
