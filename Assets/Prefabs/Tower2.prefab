@@ -660,13 +660,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2085453f5ade4f48beb8162eaf9c9e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotInterval: 1
+  shotInterval: 0.2
   targets: []
   projectilePrefab: {fileID: 1307121212994332, guid: c73bc9ad06c2ae846a27fc6ee8b66469,
     type: 2}
   projSpeed: 10
   placed: 0
-  projDamageFactor: 1.5
+  projDamageFactor: 20
 --- !u!114 &114652930945338334
 MonoBehaviour:
   m_ObjectHideFlags: 1

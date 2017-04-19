@@ -709,7 +709,7 @@ MonoBehaviour:
     type: 2}
   projSpeed: 9
   placed: 0
-  projDamageFactor: 3
+  projDamageFactor: 300
 --- !u!135 &135279193793888514
 SphereCollider:
   m_ObjectHideFlags: 1
