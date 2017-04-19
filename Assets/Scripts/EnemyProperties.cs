@@ -49,6 +49,11 @@ public class EnemyProperties : MonoBehaviour
             {
                 Destroy(gameObject);
                 mm.balance += enemyReward;
+                int chance = Random.Range(1, 10);
+                if(chance == 1)
+                {
+                    mm.balance += enemyReward;
+                }
                 score.scoreNum += killScore;
             }
             else

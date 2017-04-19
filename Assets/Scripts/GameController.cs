@@ -83,7 +83,7 @@ public class GameController : MonoBehaviour {
                     int levelNum = SceneManager.GetActiveScene().buildIndex + (dsObj != null ? ds.GetDifficultyLevel() * 3 : 0);
                     if (PlayerPrefs.HasKey(prefsName))
                     {
-                        if (PlayerPrefs.GetInt(prefsName) > levelNum)
+                        if (levelNum > PlayerPrefs.GetInt(prefsName))
                         {
                             PlayerPrefs.SetInt(prefsName, levelNum);
                             PlayerPrefs.Save();
