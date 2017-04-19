@@ -551,7 +551,7 @@ Prefab:
     - target: {fileID: 114129590139539894, guid: e0c04454ed5c8384296a468c41bf724b,
         type: 2}
       propertyPath: enemyOrder
-      value: 1,2,3,4,5,6,7,8,9
+      value: 1,2,3,4,5,6,7,0,8,0,9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0c04454ed5c8384296a468c41bf724b, type: 2}
