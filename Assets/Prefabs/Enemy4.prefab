@@ -206,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 6
   enemyReward: 2
-  killScore: 50
+  killScore: 100
   scoreDownDelay: 1
   weakness: 
   weaknessFactor: 1
@@ -235,5 +235,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seekFactor: 0.1
-  maxSpeed: 6
+  maxSpeed: 5
   enemyStrength: 1

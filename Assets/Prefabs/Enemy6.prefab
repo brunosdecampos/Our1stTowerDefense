@@ -231,9 +231,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 14
   enemyReward: 5
-  killScore: 50
+  killScore: 150
   scoreDownDelay: 1
-  weakness: fire
+  weakness: ProjectileFire
   weaknessFactor: 1.5
-  strength: wood
+  strength: ProjectileWood
   strengthFactor: 0.5

@@ -220,7 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 12
   enemyReward: 5
-  killScore: 50
+  killScore: 150
   scoreDownDelay: 1
   weakness: ProjectileFire
   weaknessFactor: 2
