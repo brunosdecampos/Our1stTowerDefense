@@ -19,7 +19,7 @@ public class MoneyManager : MonoBehaviour
     {
         balanceTxt = transform.GetChild(0).GetChild(0).GetComponent<Text>();
         touc = GameObject.FindGameObjectWithTag("GameController").GetComponent<TowerOrUpgradeCost>();
-        p = transform.GetChild(0).GetComponent<Pause>();
+        p = transform.GetChild(0).GetChild(7).GetComponent<Pause>();
     }
 	
 	// Update is called once per frame

@@ -665,6 +665,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 15
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 114129590139539894, guid: e0c04454ed5c8384296a468c41bf724b,
         type: 2}
       propertyPath: numOfWaypoints
@@ -730,6 +731,8 @@ Prefab:
       value: 
       objectReference: {fileID: 1446790867418652, guid: 5f87cf73b167744a49e3fcdfcc9d2649,
         type: 2}
+=======
+>>>>>>> origin/master
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0c04454ed5c8384296a468c41bf724b, type: 2}
   m_IsPrefabParent: 0
