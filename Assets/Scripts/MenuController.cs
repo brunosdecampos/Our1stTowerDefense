@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 
 public class MenuController : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class MenuController : MonoBehaviour
 		optionsContainer.transform.position += new Vector3 (initialXPosition, 0, 0);
         if(PlayerPrefs.HasKey("MusicOn"))
         {
-            musicOn = System.Convert.ToBoolean(PlayerPrefs.GetInt("MusicOn"));
+            musicOn = Convert.ToBoolean(PlayerPrefs.GetInt("MusicOn"));
             if(!musicOn)
             {
                 song.Stop();
@@ -29,7 +30,7 @@ public class MenuController : MonoBehaviour
         }
         if (PlayerPrefs.HasKey("EffectsOn"))
         {
-            effectsOn = System.Convert.ToBoolean(PlayerPrefs.GetInt("EffectsOn"));
+            effectsOn = Convert.ToBoolean(PlayerPrefs.GetInt("EffectsOn"));
             if (!effectsOn)
             {
                 song.Stop();
@@ -60,6 +61,7 @@ public class MenuController : MonoBehaviour
 
 	public void PlayGame ()
     {
+        PlayerPrefs.Save();
         SceneManager.LoadScene("LevelSelector");
 	}
 
@@ -106,29 +108,25 @@ public class MenuController : MonoBehaviour
 	public void ClickSoundsButton ()
 	{
 		if (musicOn) {
-			song.Stop ();
 			soundsOnOff.text = "Music: Off";
             musicOn = false;
 		} else {
-			song.Play ();
 			soundsOnOff.text = "Music: On";
             musicOn = true;
 		}
-        PlayerPrefs.SetInt("MusicOn", System.Convert.ToInt32(musicOn));
+        PlayerPrefs.SetInt("MusicOn", Convert.ToInt32(musicOn));
 	}
 
 	public void ClickEffectsButton ()
 	{
 		if (effectsOn) {
-			// soundEffect.volume = 0;
 			effectsOnOff.text = "Sound Effects: Off";
             effectsOn = false;
 		} else {
-			// soundEffect.volume = 1;
 			effectsOnOff.text = "Sound Effects: On";
             effectsOn = true;
 		}
-        PlayerPrefs.SetInt("EffectsOn", System.Convert.ToInt32(effectsOn));
+        PlayerPrefs.SetInt("EffectsOn", Convert.ToInt32(effectsOn));
     }
 
 	public void QuitGame ()

@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 114458359213423824}
   - component: {fileID: 114004314681659358}
   - component: {fileID: 114555109724903854}
+  - component: {fileID: 114806843103144944}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -1057,6 +1058,18 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114806843103144944
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1994366817452998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9696e580c11acab4ebf934dd4d8dfb75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMusic: 1
 --- !u!114 &114825831933240870
 MonoBehaviour:
   m_ObjectHideFlags: 1

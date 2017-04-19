@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54843646886122480}
   - component: {fileID: 114843235058869368}
   - component: {fileID: 82470393657249086}
+  - component: {fileID: 114089279986854520}
   m_Layer: 0
   m_Name: Projectile2
   m_TagString: ProjectileSteel
@@ -178,6 +179,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114089279986854520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1307121212994332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9696e580c11acab4ebf934dd4d8dfb75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMusic: 0
 --- !u!114 &114843235058869368
 MonoBehaviour:
   m_ObjectHideFlags: 1

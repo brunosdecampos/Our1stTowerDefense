@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54843646886122480}
   - component: {fileID: 114843235058869368}
   - component: {fileID: 82733944798629222}
+  - component: {fileID: 114908503559108842}
   m_Layer: 0
   m_Name: Projectile1
   m_TagString: ProjectileWood
@@ -75,7 +76,6 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33196585064200392
 MeshFilter:
@@ -191,6 +191,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileStrength: 1
+--- !u!114 &114908503559108842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1307121212994332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9696e580c11acab4ebf934dd4d8dfb75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMusic: 0
 --- !u!135 &135379827054906706
 SphereCollider:
   m_ObjectHideFlags: 1
