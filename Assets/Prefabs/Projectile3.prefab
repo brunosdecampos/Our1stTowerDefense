@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98efcecc6e181d4479b45083ab855f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileStrength: 1
+  projectileStrength: 300
 --- !u!114 &114979671025601722
 MonoBehaviour:
   m_ObjectHideFlags: 1
