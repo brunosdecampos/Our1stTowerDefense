@@ -479,12 +479,14 @@ MonoBehaviour:
   m_Text: 'Your objective is to stop the enemies from reaching the castle.
 
 
-    Press "1", "2" or "3" keys to place your towers, and the "U" key to upgrade them.
-    Hold down the "F" key to speed up the game. You can press the "P" key to enter
-    to the pause menu.
+    Press the "1", "2" or "3" keys to select a tower type, click to place them, and
+    press the "U" key to upgrade them (click on the tower you wish to upgrade). The
+    "F" key can be held down to speed up the game. You can also press the "P" key
+    to pause the game.
 
 
-    Manage your money to fit your defense strategy.'
+    Manage your money to fit your defense strategy, and try to clear all the levels
+    on all 3 difficulties! Good luck!'
 --- !u!222 &426840910
 CanvasRenderer:
   m_ObjectHideFlags: 0
